@@ -2,12 +2,12 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
-class ExactproStartPage(unittest.TestCase):
+class ExactproStartPageBasicChecks(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(executable_path=r"D:\webdrivers\chromedriver.exe")
 
-    def intro(self):
+    def test_intro(self):
         driver = self.driver
         self.driver.get("https://www.exactprosystems.com")
         self.assertIn("Exactpro Systems - trading software testing company | Part of the LSEG", driver.title)
